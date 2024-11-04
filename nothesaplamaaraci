@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Turkish");
+
+    int not1;
+    printf("Not Girisi Yapiniz: ");
+    scanf("%d", &not1);
+
+    if (not1 < 0) {
+        printf("Hatali Not Girisi Yapildi Lutfen Notunuzu Kontrol Edin.\n");
+    }
+    else if (not1 > 100) {
+        printf("Hatali Not Girisi Yapildi Lutfen Notunuzu Kontrol Edin.\n");
+    }
+    else if (not1 >= 0 && not1 <= 25) {
+        printf("F ile kaldiniz.\n");
+    }
+    else if (not1 >= 26 && not1 <= 50) {
+        printf("D ile sartli gectiniz.\n");
+    }
+    else if (not1 >= 51 && not1 <= 70) {
+        printf("C ile gectiniz.\n");
+    }
+    else if (not1 >= 71 && not1 <= 80) {
+        printf("B ile gectiniz.\n");
+    }
+    else if (not1 >= 81 && not1 <= 100) {
+        printf("A ile basarili gectiniz.\n");
+    }
+
+    return 0;
+}
